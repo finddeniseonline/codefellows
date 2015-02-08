@@ -1,0 +1,29 @@
+<SCRIPT>
+alert('Try this guessing game');
+
+ 
+var number = Math.floor(Math.random() * 10) + 1;
+
+var guess = prompt('Guess what number I am thinking…');
+var remaining = 3;
+var win;
+while (remaining > 0) {
+
+  guess = prompt("keep guessing!");
+ if (guess == number) {
+    alert('You guessed correctly');
+    win = true;
+    break;
+  }
+  remaining--;
+  win = false;
+}
+if (win) {
+  alert('congrats');
+} else {
+  alert('hmm');
+}
+
+alert('Thanks for playing');
+
+</SCRIPT>
