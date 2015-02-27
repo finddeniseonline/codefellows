@@ -1,6 +1,6 @@
 var race = document.getElementById('play');
 var exitRace = document.getElementById('exit');
-exit.onclick = close;
+exitRace.onclick = close;
 race.onclick = runRace;
 //var run = function run() {
 var Animal = function(n, s, f) {
@@ -33,11 +33,6 @@ function runRace() {
       console.log(rabbit.report());
     }
 
-    function close() {
-        exitRace = window.close;
-       // if (confirm("Close Window?")) {
-   // close();
- // }
     }
 
     if (turtle.position > rabbit.position) {
@@ -48,6 +43,9 @@ function runRace() {
       console.log("I am swift and easily distracted, but I beat you!");
     }
   
-
+    function close() {
+       exitRace = window.close;
+      // if (confirm("Close Window?")) {
+    close();
+ }
     alert(luckyOne + " is the winner!");
-}
