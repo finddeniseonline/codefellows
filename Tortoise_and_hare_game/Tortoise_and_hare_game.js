@@ -1,6 +1,6 @@
 var race = document.getElementById('play');
 var exitRace = document.getElementById('exit');
-exitRace.onclick = close;
+exitRace.onclick = closeWindow;
 race.onclick = runRace;
 //var run = function run() {
 var Animal = function(n, s, f) {
@@ -23,16 +23,16 @@ var turtle = new Animal("Tortoise", 8, 4),
     rabbit = new Animal("Hare", 2, 8);
 
 var distance = 25;
-var luckyOne;
+
 
 function runRace() {
+  var luckyOne;
+
     while ( (turtle.position < distance) && (rabbit.position < distance) ) {
       turtle.run();
       rabbit.run();
       console.log(turtle.report());
       console.log(rabbit.report());
-    }
-
     }
 
     if (turtle.position > rabbit.position) {
@@ -42,10 +42,11 @@ function runRace() {
       luckyOne = rabbit.name;
       console.log("I am swift and easily distracted, but I beat you!");
     }
-  
-    function close() {
-       exitRace = window.close;
-      // if (confirm("Close Window?")) {
-    close();
+  alert(luckyOne + " is the winner!");
  }
-    alert(luckyOne + " is the winner!");
+  
+
+
+  function closeWindow() {
+       window.close();
+       }
